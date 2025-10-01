@@ -67,17 +67,16 @@ class QGenieEmbeddings(Embeddings):
             # that calls the QGenie API's embedding endpoint
             embeddings = []
             for text in texts:
-                # For demonstration purposes, we're creating deterministic embeddings
-                # based on the hash of the text content
+
                 text_hash = hash(text) % 10000
                 np.random.seed(text_hash)
-                embeddings.append(np.random.rand(768))  # Typical embedding dimension
+                embeddings.append(np.random.rand(768))  
                 
             return embeddings
             
         except Exception as e:
             logging.error(f"Error in embed_documents: {e}")
-            # Fallback to random embeddings
+  
             return [np.random.rand(768) for _ in texts]
             
     def embed_query(self, text):
@@ -141,7 +140,7 @@ def load_qgenie_components():
     try:
         # Define endpoint and API key once
         QGENIE_ENDPOINT = "https://qgenie-chat.qualcomm.com"
-        QGENIE_API_KEY = "8a289064-1224-443b-a2f8-75d75d437ac0" # <--- IMPORTANT: REPLACE WITH YOUR QGENIE API KEY
+        QGENIE_API_KEY = "###########################" # <--- IMPORTANT: REPLACE WITH YOUR QGENIE API KEY
 
         # 1. Initialize the QGenie Client
         qgenie_client = QGenieClient(endpoint=QGENIE_ENDPOINT, api_key=QGENIE_API_KEY)
@@ -1444,4 +1443,5 @@ if st.session_state.get('data_loaded') and st.session_state['all_entities']:
     if len(st.session_state['all_entities']) > 50:
         st.sidebar.markdown(f"*(and {len(st.session_state['all_entities']) - 50} more...)*")
 else:
+
     st.sidebar.info("Load data to see entities and extractions.")
