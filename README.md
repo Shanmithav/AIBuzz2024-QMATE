@@ -31,7 +31,6 @@ Key features include:
 Installations: 
   pip install streamlit networkx pyvis nltk torch numpy requests langchain-core
   Install QGenie SDK Basic [ https://qgenie-sdk-python.qualcomm.com/qgenie_sdk_core/tutorials/basic_usage.html ]
-
   pip install qgenie
   Download NLTK data
 There is a place holder in the code to add ypur QGenie API key and endpoint 
