@@ -2,7 +2,7 @@ Team Name: QueryMates
 
 Idea Title: QMATE (Don't worry buddy I got it all)
 
-Idea url:
+Idea url: https://aibuzz.qualcomm.com/idea/4899
 
 Team Members: Shanmitha Vangeti, Pruthvi Raj Singh
 
